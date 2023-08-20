@@ -9,7 +9,9 @@ export default function About() {
                         Hello, I'm Kathryn.
                         <br className="hidden lg:inline-block" />SDET, data analyst, and creative.
                     </h1>
-                    <p className="mb-8 leading-relaxed">Lorem ipsum</p>
+                    <p className="mb-8 leading-relaxed">
+                        Software Developer in Test with experience in UI testing and automation with Rust and Cucumber. Data analysis experience with Python and SQL.
+                    </p>
                     <div className="flex justify-center">
                         <a
                             href="#contact"
@@ -21,13 +23,18 @@ export default function About() {
                             className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
                                 See My Past Work
                         </a>
+                        <a
+                            href="#skills"
+                            className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+                                Skills and Technologies
+                        </a>
                     </div>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                 <img
                     className="object-cover object-center rounded"
-                    alt="hero"
-                    src="./coding.svg"
+                    alt="Photo by Juanjo Jaramillo on Unsplash"
+                    src="./juanjo-jaramillo-mZnx9429i94-unsplash.jpg"
                 />
                 </div>
             </div>

@@ -1,35 +1,19 @@
 export const projects = [
     {
-      title: "React Reserve",
-      subtitle: "MERN Stack",
+      title: "Structured Context for Public Metadata",
+      subtitle: "Civic Software Foundation",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-1.gif",
-      link: "https://reactbootcamp.com",
+        "Developed a data framework to support an expandable public data respository",
+      image: "./civic.png",
+      link: "https://www.civicdatalibrary.org/",
     },
     {
-      title: "React Tracks",
-      subtitle: "React and Python",
+      title: "Torn Apart / Separados",
+      subtitle: "Columbia University",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-2.gif",
-      link: "https://reactbootcamp.com",
-    },
-    {
-      title: "DevChat",
-      subtitle: "React and Firebase",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-3.gif",
-      link: "https://reactbootcamp.com",
-    },
-    {
-      title: "Epic Todo App",
-      subtitle: "React Hooks",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-4.gif",
-      link: "https://reactbootcamp.com",
+        "Cleaned, combined, and summarized data for an emergent visualization project",
+      image: "./tornapart.png",
+      link: "http://xpmethod.columbia.edu/torn-apart/volume/1/",
     },
   ];
 

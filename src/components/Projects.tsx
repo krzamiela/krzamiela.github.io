@@ -9,12 +9,10 @@ export default function Projects() {
             <div className="flex flex-col w-full mb-20">
             <CodeBracketSquareIcon className="mx-auto inline-block w-10 mb-4" />
             <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-                Apps I've Built
+                Projects
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-                facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-                fuga dolore.
+                Data and systems analyst since 2016, software developer since 2023.
             </p>
             </div>
             <div className="flex flex-wrap -m-4">
