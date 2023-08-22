@@ -3,7 +3,7 @@ export const projects = [
       title: "Structured Context for Public Metadata",
       subtitle: "Civic Software Foundation",
       description:
-        "Developed a data framework to support an expandable public data respository",
+        "Developed a data framework to support an expandable public data repository",
       image: "./civic.png",
       link: "https://www.civicdatalibrary.org/",
     },
