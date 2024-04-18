@@ -1,5 +1,13 @@
 export const projects = [
     {
+      title: "DNA Stats Project",
+      subtitle: "Coursera - Johns Hopkins",
+      description:
+        "Developed a Python module to calculate statistics on DNA sequences",
+      image: "./dnastats.png",
+      link: "https://github.com/krzamiela/dna-stats",
+    },
+    {
       title: "Structured Context for Public Metadata",
       subtitle: "Civic Software Foundation",
       description:
@@ -18,17 +26,11 @@ export const projects = [
   ];
 
   export const skills = [
-    "Rust",
-    "Cucumber",
-    "Test Automation",
-    "Git",
-    "Quality Assurance",
-    "JavaScript",
-    "React",
-    "Node",
     "Python",
-    "SQL",
+    "R",
     "Data Analytics",
-    "Jira",
-    "Agile"
+    "Data Visualization",
+    "Systems Analysis",
+    "Linux",
+    "Genomics"
   ];
