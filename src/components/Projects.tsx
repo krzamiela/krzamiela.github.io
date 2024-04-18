@@ -13,6 +13,7 @@ export default function Projects() {
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
                 Data and systems analyst since 2016, software developer since 2023.
+                <br className="hidden lg:inline-block" />Genomic Data Science Specialization completed in 2024.
             </p>
             </div>
             <div className="flex flex-wrap -m-4">

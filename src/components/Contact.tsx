@@ -18,8 +18,8 @@ export default function Contact() {
                         frameBorder={0}
                         marginHeight={0}
                         marginWidth={0}
-                        style={{ filter: "opactiy(0.7)" }}
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=-122.66819000244142%2C47.154003588277526%2C-122.32795715332033%2C47.33184253461828&amp;layer=mapnik"
+                        style={{ filter: "opacity(0.9)" }}
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-88.15841674804688%2C41.56819689811343%2C-87.22457885742188%2C42.10637370579326&amp;layer=mapnik"
                     />
                 </div>
                 <form name="contact" onSubmit={handleSubmit} className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">

@@ -7,10 +7,12 @@ export default function About() {
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
                         Hello, I'm Kathryn.
-                        <br className="hidden lg:inline-block" />SDET, data analyst, and creative.
+                        <br className="hidden lg:inline-block" />Systems Analyst and
+                        <br className="hidden lg:inline-block" />Aspiring Computational Biologist.
                     </h1>
                     <p className="mb-8 leading-relaxed">
-                        Software Developer in Test with experience in UI testing and automation with Rust and Cucumber. Data analysis experience with Python and SQL.
+                        Systems Analyst with data analysis experience in Python and R.
+                        <br className="hidden lg:inline-block" /><a href="https://github.com/krzamiela">GitHub: krzamiela</a>
                     </p>
                     <div className="flex justify-center">
                         <a

@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://catomancer.github.io",
+  "homepage": "https://krzamiela.github.io",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.5.0",
