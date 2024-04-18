@@ -1,2 +1,2 @@
-# catomancer.github.io
-Portfolio
+# krzamiela.github.io
+Computational Biology Portfolio
