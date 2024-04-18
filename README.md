@@ -1,2 +1,2 @@
 # krzamiela.github.io
-Computational Biology Portfolio
+Computational Biology Portfolio 
