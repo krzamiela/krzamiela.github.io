@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adding an Export to CSV Option to a Power App</title>
+  </head>
+  <body>
+    <nav>
+  
+    <a href="/" >
+        Home
+    </a>
+  
+    <a href="/blog.html" >
+        Blog
+    </a>
+  
+</nav>
+    <h1>Adding an Export to CSV Option to a Power App</h1>
+<p>19 Apr 2024</p>
+
+<p>I encountered a scenario at work where my team needs an interface to keep track of audits.  They want to be able to enter new audit records and view existing ones.  Most importantly, they want to be able to export audit records based on self-selected filters and view this data in Excel.</p>
+
+<p>During Phase I of this project, I built two Microsoft Power Apps and embedded them in a PowerBI report.  Based on initial feedback, it became clear that for Phase II, the ability to export to Excel was a critical function.</p>
+
+<p>I found several helpful videos about how to use the experimental feature “Ask in Power Apps” to achieve this; however, this functionality is no longer supported.  I wanted to build something based on standard components that are unlikely to change or disappear.  I had some great formatting and syntax help from <a href="https://www.matthewdevaney.com/powerapps-collections-cookbook/export-a-collection-to-a-json/">Matthew Devaney’s blog</a> and <a href="https://www.youtube.com/watch?v=QTbVMu6DIfQ">Daniel Christian’s Youtube</a>, but because my case was a little more specific, I’m writing this article to help close the gap.</p>
+
+<p>Here are the basic steps to export Power Apps data to a CSV file:</p>
+
+<ol>
+  <li><a href="#transform-data">Transform the data source into JSON data</a></li>
+  <li><a href="#send-power-automate">Send the JSON data to Power Automate</a></li>
+  <li><a href="#create-flow">Create a Power Automate Flow that creates a CSV file in SharePoint</a></li>
+  <li><a href="#send-link">Send the SharePoint file link back to the Power App</a></li>
+</ol>
+
+<h3 id="transform-the-data-source"><a name="transform-data"></a>Transform the data source</h3>
+
+<p>Transforming the data turned out to be the most difficult step of the process for me because most of the examples used a simple data source.  My team’s data is stored in a SharePoint list, and I display this list in Power Apps as a gallery with filters.  Initially, I tried transforming “&lt;GalleryName&gt;.Visible”, hoping that this would recognize the filters.  Unfortunately, I quickly realized that the gallery only contains a few data elements from the SharePoint list, and I need every column.</p>
+
+<p>Here is the transformation solution I came up with, and I’ll break it down step by step:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// transform data into collection
+ClearCollect(varData,
+    ForAll(
+        Filter(
+            'Data Source Name',
+            ItemID.Selected.Value=Blank() Or 'Item ID'=ItemID.Selected.Value,
+            Year.Selected.Value=Blank() Or 'Fiscal Year of Audit'=Year.Selected.Value
+            ),
+        {
+            'Item ID': If(IsBlank(ThisRecord.'Item ID'),"",ThisRecord.'Item ID'),
+            'Fiscal Year of Audit': If(IsBlank(ThisRecord.'Fiscal Year of Audit'),"",ThisRecord.'Fiscal Year of Audit')
+        }
+    )
+);
+
+// collection to JSON
+Set(jsonData, JSON(varData));
+</code></pre></div></div>
+
+<p>What are these functions doing?  Let’s start with the innermost function and work our way outwards.</p>
+
+<h3 id="send-to-power-automate"><a name="send-power-automate"></a>Send to Power Automate</h3>
+
+<h3 id="create-a-power-automate-flow"><a name="create-flow"></a>Create a Power Automate Flow</h3>
+
+<h3 id="send-the-file-link-back-to-power-apps"><a name="send-link"></a>Send the file link back to Power Apps</h3>
+
+  </body>
+</html>
