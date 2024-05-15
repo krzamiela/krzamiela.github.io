@@ -45,7 +45,7 @@ Sort(Filter(User,'User Title'=1))
 Create a new gallery called ``` AwardGallery ``` next to the first one and set the data source to the Award table.  Set the *Items* property to:
 
 ```
-Filter(Award, 'Grant Assignee'.UserID=UserGallery.Selected.GCFA_User)
+Filter(Award, 'Grant Assignee'.UserID=UserGallery.Selected.'User ID')
 ```
 
 This will show all of the awards with the "Grant Assignee" equal to the current selected user.
@@ -61,7 +61,7 @@ Collect(AwardCollection, {Award: AwardGallery.Selected.Contract}))
 Let's break this down step by step.  We want to create a collection of awards that we can update at once.  To do this in Power Apps, we use:
 
 ```
-Collect(<CollectionName>, {<NewFieldName>: AwardGallery.Selected.Value})
+Collect(<CollectionName>, {<NewFieldName>: <GalleryName>.Selected.Value})
 ```
 
 We want the user to remove an award if they accidentally click on the wrong one when selecting awards.  To do this, we check whether the award that they just clicked on already exists in the collection.  If it does, we call ``` Remove() ```.  Otherwise, we add it to the collection with ``` Collect() ```.
