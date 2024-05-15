@@ -69,7 +69,13 @@ We want the user to remove an award if they accidentally click on the wrong one 
 ### <a name="create-form"></a>Create an Edit Form from the Award table
 Create an Edit Form and set the data source to the Award table.  Go through the fields and remove everything except "Grant Assignee", "Assistant Assignee", and "Assistant Director".  
 
-Do not set the *Item* property yet; we need to create a data structure to hold our selected award data first.
+Set the *Item* property to:
+
+```
+LookUp(Award, Contract=First(AwardCollection).Award)
+```
+
+This will populate the form with the information from the first selected item in the award collection.
 
 **Note**: We will not actually be submitting this form -- do not use the ``` SubmitForm() ``` function if you are modifying this code!
 
